@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(ExplodeSequence());
     }
 
-    private IEnumerator ExplodeSequence()
+    public IEnumerator ExplodeSequence()
     {
         float elapsed = 0f;
         float duration = 0.5f;

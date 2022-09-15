@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator ExplodeSequence()
     {
         float elapsed = 0f;
-        float duration = 0.5f;
+        float duration = 1.5f;
 
         while (elapsed < duration)
         {
@@ -91,10 +91,10 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(2.8f);
 
 
-        elapsed = 0f;
+        /*elapsed = 0f;
 
         while (elapsed < duration)
         {
@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
             elapsed += Time.unscaledDeltaTime;
 
             yield return null;
-        }
+        }*/
 
         SceneManager.LoadScene(0);
 

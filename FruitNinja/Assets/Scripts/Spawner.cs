@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
 
     public float torque;
     public GameObject bomb;
-    private bool isBomb = false;
+    public bool isBomb = false;
 
     public GameObject[] fruitPrefabs;
     public GameObject bombPrefab;
@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour
     public float minForce = 18f;
     public float maxForce = 24f;
 
-    public float maxLifetime = 5f;
+    public float maxLifetime = 4f;
 
 
     private void Awake()
@@ -79,6 +79,9 @@ public class Spawner : MonoBehaviour
                 Rigidbody bombRb = bomb.GetComponent<Rigidbody>();
                 float turn = Input.GetAxis("Horizontal");
                 bombRb.AddTorque(transform.up * torque * turn);
+
+                FindObjectOfType<PlayAudio>().Sizzle(true);
+                isBomb = false;
             }
 
             Destroy(fruit, maxLifetime);

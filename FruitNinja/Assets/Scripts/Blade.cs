@@ -35,14 +35,17 @@ public class Blade : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            
             StartSlice();
         }
         else if (Input.GetMouseButtonUp(0))
         {
+            FindObjectOfType<PlayAudio>().Swipe(false);
             StopSlice();
         }
         else if (slicing)
         {
+            FindObjectOfType<PlayAudio>().Swipe(true);
             ContinueSlice();
         }
     }
@@ -64,6 +67,7 @@ public class Blade : MonoBehaviour
         slicing = false;
         sliceCollider.enabled = false;
         sliceTrail.enabled = false;
+
     }
 
     private void ContinueSlice()

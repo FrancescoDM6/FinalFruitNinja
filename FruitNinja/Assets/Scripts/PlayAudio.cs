@@ -6,12 +6,12 @@ public class PlayAudio : MonoBehaviour
 {
 
     //public AudioSource audio;
-
+    //public AudioSource Fuse;
    
     void Start()
     {
-       // audio = GetComponent<AudioSource>();
-        //audio.Play(0);
+        //Fuse.Play();
+       //GetComponent<AudioSource>().Play(0);
     }
 
    

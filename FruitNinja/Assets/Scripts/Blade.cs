@@ -12,6 +12,8 @@ public class Blade : MonoBehaviour
     public float sliceForce = 5f;
     public float minSliceVelocity = 0.01f;
 
+    public AudioSource Swordswipe1;
+
     private bool slicing;
 
     private void Awake()
@@ -36,6 +38,7 @@ public class Blade : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             StartSlice();
+            GetComponent<AudioSource>().Play();
         }
         else if (Input.GetMouseButtonUp(0))
         {
@@ -44,6 +47,7 @@ public class Blade : MonoBehaviour
         else if (slicing)
         {
             ContinueSlice();
+            Swordswipe1.Play();
         }
     }
 

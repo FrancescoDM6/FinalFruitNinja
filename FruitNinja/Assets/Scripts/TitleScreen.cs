@@ -13,7 +13,11 @@ public class TitleScreen : MonoBehaviour
 
     public Image fadeImage;
 
+public void Start(){
+Camera.main.fieldOfView = fov;
+}
 
+<<<<<<< Updated upstream
     void Start()
     {
         
@@ -23,16 +27,25 @@ public class TitleScreen : MonoBehaviour
     {
         
         if (fov < endFOV)
+=======
+  public void Update(){
+      if (fov < endFOV)
+>>>>>>> Stashed changes
         {
         Camera.main.fieldOfView = fov;
         fov += changeMultiplier;
         }
-        else{
+        else
+        {
         StartCoroutine(Fade());
         }
-    }
 
+<<<<<<< Updated upstream
    
+=======
+  }
+        
+>>>>>>> Stashed changes
     
     public IEnumerator Fade()
     {

@@ -7,7 +7,7 @@ public class ChangeScene : MonoBehaviour
 {
     public void MoveToScene(int sceneID)
     {
-        print("changeed");
+        print("changed");
        SceneManager.LoadScene(sceneID);
     }
 }

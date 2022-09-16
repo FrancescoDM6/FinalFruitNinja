@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }*/
 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
 
     }
 }

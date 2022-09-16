@@ -10,12 +10,17 @@ public class Spawner : MonoBehaviour
     public GameObject bomb;
     public bool isBomb = false;
 
+    public GameObject bonusBerry;
+    public bool isBonusBerry = false;
+    public float bonusBerryChance = 0.01f;
+    public GameObject bonusBerryPrefab;
+
     public GameObject[] fruitPrefabs;
     public GameObject bombPrefab;
 
     [Range(0f,1f)]
 
-    public float bombChance = 0.05f;
+    public float bombChance = 0.09f;
     public GameObject blueberryPrefab;
     public float blueberryChance = 0.1f;
 
@@ -54,15 +59,23 @@ public class Spawner : MonoBehaviour
         {
             GameObject prefab = fruitPrefabs[Random.Range(0, fruitPrefabs.Length)];
 
-            if (Random.value < blueberryChance)
+            if (Random.value < blueberryChance && Random.value > bombChance)
             {
                 prefab = blueberryPrefab;
-                if (Random.value < bombChance)
-                {
-                    prefab = bombPrefab;
-                    isBomb = true;
-                }
+                // if ()
+                // {
+                    
+                //     if(Random.value < bonusBerryChance){
+                        
+                //     }
+                // }
                 
+            } else if (Random.value < bombChance && Random.value > bonusBerryChance){
+                prefab = bombPrefab;
+                isBomb = true;
+            } else if (Random.value < bonusBerryChance){
+                prefab = bonusBerryPrefab;
+                isBonusBerry = true;
             }
 
             Vector3 position = new Vector3();
@@ -87,6 +100,10 @@ public class Spawner : MonoBehaviour
             if(isBomb == true){
                 GetComponent<AudioSource>().Play();
             }
+
+            // if(isBonusBerry == true){
+
+            // }
             
 
             Destroy(fruit, maxLifetime);

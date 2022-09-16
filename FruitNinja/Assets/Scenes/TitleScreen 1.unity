@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 25730068}
-  - component: {fileID: 25730071}
+  - component: {fileID: 25730069}
   m_Layer: 5
   m_Name: SplashScreen
   m_TagString: Untagged
@@ -162,7 +162,7 @@ RectTransform:
   m_AnchoredPosition: {x: -38.391, y: 116.735}
   m_SizeDelta: {x: 894.402, y: 514.871}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &25730071
+--- !u!114 &25730069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 25730067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50579c443f6a8fc4c904ab20c0a7bf79, type: 3}
+  m_Script: {fileID: 11500000, guid: a38c4c471d1f3b74baabea746507c9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &56708079
@@ -342,8 +342,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 25730071}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 25730069}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
         m_MethodName: ToMenu
         m_Mode: 1
         m_Arguments:

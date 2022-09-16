@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
     {
         blade.enabled = false;
         spawner.enabled = false;
-
+        
         StartCoroutine(ExplodeSequence());
     }
 

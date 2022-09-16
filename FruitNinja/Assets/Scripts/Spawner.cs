@@ -83,6 +83,11 @@ public class Spawner : MonoBehaviour
                 FindObjectOfType<PlayAudio>().Sizzle(true);
                 isBomb = false;
             }
+            
+            if(isBomb == true){
+                GetComponent<AudioSource>().Play();
+            }
+            
 
             Destroy(fruit, maxLifetime);
 
@@ -90,6 +95,7 @@ public class Spawner : MonoBehaviour
             fruit.GetComponent<Rigidbody>().AddForce(fruit.transform.up * force, ForceMode.Impulse);
 
             yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
+            
         }
     }
 }

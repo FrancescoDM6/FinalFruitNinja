@@ -5,9 +5,11 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
     public TMP_Text scoreText;
+    public Animator scoreanimator;
     public Image fadeImage;
 
     private Blade blade;
@@ -67,6 +69,8 @@ public class GameManager : MonoBehaviour
     public void IncreaseScore(int amount)
     {
         score += amount;
+        scoreanimator.SetTrigger("change");
+
         scoreText.text = score.ToString();
     }
 

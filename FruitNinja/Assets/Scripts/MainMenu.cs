@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject gameover;
 
-    private bool gover;
+    private bool go = false;
     
     
 
@@ -23,13 +23,13 @@ public class MainMenu : MonoBehaviour
 
     }
 
-    void Awake(){
+    void Update(){
         if (GameManager.gameo != null){
-            gover = GameManager.gameo.gover;
+            go = GameManager.gameo.gover;
 
         }
         
-        if(gover== true){
+        if(go == true){
             gameover.SetActive(true);
         } else {
             gameover.SetActive(false);

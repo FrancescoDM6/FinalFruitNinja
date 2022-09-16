@@ -13,6 +13,10 @@ public class Fruit : MonoBehaviour
 
     public int points = 1;
 
+    public int multiplier = 1;
+    // private int mult;
+    public bool bb = false;
+
     private void Awake()
     {
         fruitRB = GetComponent<Rigidbody>();
@@ -22,7 +26,15 @@ public class Fruit : MonoBehaviour
 
     private void Slice(Vector3 direction, Vector3 position, float force)
     {
-        FindObjectOfType<GameManager>().IncreaseScore(points);
+
+        // bb = false;
+        // if (ActivateBonus() == false){
+        //     GetPoint(1);
+        // } else if (ActivateBonus() == true){
+        //     GetPoint(multiplier);
+        // }
+
+        GetPoint(multiplier);
 
         whole.SetActive(false); ;
         sliced.SetActive(true);
@@ -52,5 +64,17 @@ public class Fruit : MonoBehaviour
             Slice(blade.direction, blade.transform.position, blade.sliceForce);
         }
     }
+
+    private void GetPoint(int mult){
+        multiplier = mult;
+
+        points = points*multiplier;
+        FindObjectOfType<GameManager>().IncreaseScore(points);
+
+        multiplier = 1;
+    }
+
+    
+
 
 }

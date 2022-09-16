@@ -84,6 +84,9 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator ExplodeSequence()
     {
+        gameo = this;
+        gover = true;
+
         float elapsed = 0f;
         float duration = 1.5f;
 
@@ -112,8 +115,7 @@ public class GameManager : MonoBehaviour
 
             yield return null;
         }*/
-        gameo = this;
-        gover = true;
+        
         // MainMenu.GameOver();
         SceneManager.LoadScene(1);
 

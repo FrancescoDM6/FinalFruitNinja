@@ -16,69 +16,27 @@ public class TitleScreen : MonoBehaviour
 
     void Start()
     {
-<<<<<<< HEAD
-        //Camera.main.fieldOfView = fov;
-       // awake = true;
-        //Zoom(awake);
-        // TitleFade();
-        // intro.SetActive(true);
-        // splashScreen.SetActive(false);
-        Zoom();
-=======
+
         
         Camera.main.fieldOfView = fov;
->>>>>>> Hunter
     }
 
-    void Update()
-    {
-<<<<<<< HEAD
-        Start();
-        // else if (time > timer)
-        // {
-
-            
-        //     break();
-            
-        //     //awake = false;
-        //     //Fade();
-        // }
+    void Update(){
         
+      
 
-
-
-    }
-
-    private void Activate(){
-        intro.SetActive(false);
-        splashScreen.SetActive(true);
-    }
-
-    public void Zoom(){
-        if (fov <= 170) {
-            Camera.main.fieldOfView = fov;
-            fov += changeMultiplier;
-        } else if (fov >170){
-            Activate();
-        }
-    
-    }
-
-
-    //I wanted to make it fade out before changing but I need mroe time to figure it out
-=======
-        
         if (fov < endFOV)
         {
         Camera.main.fieldOfView = fov;
         fov += changeMultiplier;
         }
-        else{
+        else
+        {
         StartCoroutine(Fade());
         }
-    }
+  }
 
->>>>>>> Hunter
+
    
     
     public IEnumerator Fade()

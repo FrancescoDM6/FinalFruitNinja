@@ -5,8 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+<<<<<<< HEAD
   - enabled: 0
+=======
+  - enabled: 1
+<<<<<<< Updated upstream
+>>>>>>> Hunter
     path: Assets/Scenes/TitleScreen 1.unity
+=======
+    path: Assets/Scenes/TitleScreen1_1.unity
+>>>>>>> Stashed changes
     guid: b7138d496c474db4aaae00b0b6e1edb2
   - enabled: 1
     path: Assets/Scenes/StartingScreenScene.unity

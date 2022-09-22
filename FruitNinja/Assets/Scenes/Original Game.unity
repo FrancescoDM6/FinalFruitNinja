@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43632814, g: 0.47471273, b: 0.5147158, a: 1}
+  m_IndirectSpecularColor: {r: 0.43632793, g: 0.4747123, b: 0.51471514, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -221,8 +221,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1035330197}
+  scoreanimator: {fileID: 0}
   fadeImage: {fileID: 879703225}
   score: 0
+  gover: 0
 --- !u!4 &187473123
 Transform:
   m_ObjectHideFlags: 0
@@ -1037,7 +1039,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840355258}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3986ca0af7360d4fa1b74793f067f25, type: 3}
   m_Name: 
@@ -1066,13 +1068,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840355258}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e26aaf444192f4ebde32b35a860865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   torque: 1
   bomb: {fileID: 6386381059559477297, guid: a8e17cb40e2e225478a47481d5b6df95, type: 3}
+  isBomb: 0
+  bonusBerry: {fileID: 0}
+  isBonusBerry: 0
+  bonusBerryChance: 0.01
+  bonusBerryPrefab: {fileID: 0}
   fruitPrefabs:
   - {fileID: 388895983315201714, guid: 3f3473d03d73c614ca25f47fe022bc64, type: 3}
   - {fileID: 7287319495364455727, guid: 606e809bff7ab9f4da93ea3ccef9948c, type: 3}

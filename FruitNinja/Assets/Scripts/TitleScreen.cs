@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class TitleScreen : MonoBehaviour
 {
     public float fov = 130f;
-    public float changeMultiplier = .006f;
+    public float changeMultiplier = .05f;
     public float endFOV;
 
     public Image fadeImage;
@@ -55,7 +55,7 @@ public class TitleScreen : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSecondsRealtime(.05f);
+        yield return new WaitForSecondsRealtime(2f);
 
         SceneManager.LoadScene(1);
 

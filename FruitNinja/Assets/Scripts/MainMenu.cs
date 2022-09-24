@@ -7,13 +7,12 @@ using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
-    public TMP_Text newscore;
-    public TMP_Text highscore = '0';
+    public TMP_Text highscore;
 
-    public int hscore = 0;
+    public int hscore;
+    public int score;
 
-    public GameObject gameover;
-    private bool go = false;
+    
     
     
 
@@ -30,27 +29,31 @@ public class MainMenu : MonoBehaviour
 
     void Update(){
 
-        
+        if (MainManager.Instance != null){
+            score = MainManager.Instance.hiscore;
 
-
-        if (GameManager.gameo != null){
-            go = GameManager.gameo.gover;
-
+            if (score > hscore){
+                highscore.text = score.ToString();
+                hscore = score;
+            }
         }
+
+
+        // if (GameManager.gameo != null){
+        //     go = GameManager.gameo.gover;
+
+        // }
         
-        if(go == true){
-            gameover.SetActive(true);
-        } else {
-            gameover.SetActive(false);
-        }
+        // if(go == true){
+        //     gameover.SetActive(true);
+        // } else {
+        //     gameover.SetActive(false);
+        // }
     }
 
-    public void HighScore(){
-        int temp = GameManager.score;
-        newscore.text = temp.ToString();
-
-        if (temp > hscore){
-            highscore.text = newscore.text;
-        }
-    }
+    // public void HighScore(){
+        
+    // }
+    
+    
 }

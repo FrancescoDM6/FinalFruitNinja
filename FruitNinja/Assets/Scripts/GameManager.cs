@@ -16,9 +16,7 @@ public class GameManager : MonoBehaviour
     private Spawner spawner;
 
     public int score;
-    public bool gover = false;
-
-    public static GameManager gameo;
+  
 
 
     private void Awake()
@@ -41,6 +39,7 @@ public class GameManager : MonoBehaviour
 
         score = 0;
         scoreText.text = score.ToString();
+        
 
         ClearScene();
     }
@@ -84,8 +83,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator ExplodeSequence()
     {
-        gameo = this;
-        gover = true;
+        MainManager.Instance.score = score;
 
         float elapsed = 0f;
         float duration = 1.5f;

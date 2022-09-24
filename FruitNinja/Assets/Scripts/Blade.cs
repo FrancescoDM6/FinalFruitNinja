@@ -12,46 +12,51 @@ public class Blade : MonoBehaviour
     public float sliceForce = 5f;
     public float minSliceVelocity = 0.01f;
 
-    // public AudioSource Swordswipe1;
+    //public AudioSource Swordswipe1;
 
-    private bool slicing;
+    //private bool slicing;
 
     private void Awake()
     {
+        
         mainCamera = Camera.main;
         sliceCollider = GetComponent<Collider>();
         sliceTrail = GetComponentInChildren<TrailRenderer>();
+        StartSlice();
+        
     }
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
-        StopSlice();
+        StartSlice();
     }
 
     private void OnDisable()
     {
         StopSlice();
-    }
+    }*/
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            
-            StartSlice();
-            // GetComponent<AudioSource>().Play();
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            FindObjectOfType<PlayAudio>().Swipe(false);
-            StopSlice();
-        }
-        else if (slicing)
-        {
-            FindObjectOfType<PlayAudio>().Swipe(true);
-            ContinueSlice();
-            // Swordswipe1.Play();
-        }
+        ContinueSlice();
+        FindObjectOfType<PlayAudio>().Swipe(true);//plays swipe when hitting fruit
+        /* if (Input.GetMouseButtonDown(0))
+         {
+
+             StartSlice();
+             // GetComponent<AudioSource>().Play();
+         }
+         else if (Input.GetMouseButtonUp(0))
+         {
+             FindObjectOfType<PlayAudio>().Swipe(false);
+             StopSlice();
+         }
+         else if (slicing)
+         {
+             FindObjectOfType<PlayAudio>().Swipe(true);
+             ContinueSlice();
+             // Swordswipe1.Play();
+         }*/
     }
 
     private void StartSlice()
@@ -60,19 +65,19 @@ public class Blade : MonoBehaviour
         position.z = 0f;
         transform.position = position;
 
-        slicing = true;
+        //slicing = true;
         sliceCollider.enabled = true;
         sliceTrail.enabled = true;
         sliceTrail.Clear();
     }
 
-    private void StopSlice()
+    /*private void StopSlice()
     {
         slicing = false;
         sliceCollider.enabled = false;
         sliceTrail.enabled = false;
 
-    }
+    }*/
 
     private void ContinueSlice()
     {
@@ -85,6 +90,8 @@ public class Blade : MonoBehaviour
         sliceCollider.enabled = velocity > minSliceVelocity;
 
         transform.position = newPosition;
+
+        
     }
 
 }

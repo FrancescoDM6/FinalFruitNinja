@@ -805,7 +805,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975700487}
+<<<<<<< Updated upstream:FruitNinja/Assets/Scenes/TitleScreen1_1.unity
   m_LocalRotation: {x: 0, y: 0.70710677, z: -0.70710677, w: 0}
+=======
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+>>>>>>> Stashed changes:FruitNinja/Assets/Scenes/TitleScreen 1.unity
   m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 28.850998, y: 10, z: 18.874}
   m_ConstrainProportionsScale: 0
@@ -813,8 +817,13 @@ Transform:
   m_Father: {fileID: 0}
 <<<<<<< HEAD
   m_RootOrder: 3
+<<<<<<< Updated upstream:FruitNinja/Assets/Scenes/TitleScreen1_1.unity
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1640048742
+=======
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+--- !u!1 &1615976646
+>>>>>>> Stashed changes:FruitNinja/Assets/Scenes/TitleScreen 1.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

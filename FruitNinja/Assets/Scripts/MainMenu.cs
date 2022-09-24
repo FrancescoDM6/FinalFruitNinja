@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject gameover;
+    public TMP_Text newscore;
+    public TMP_Text highscore = '0';
 
+    public int hscore = 0;
+
+    public GameObject gameover;
     private bool go = false;
     
     
@@ -24,6 +29,10 @@ public class MainMenu : MonoBehaviour
     }
 
     void Update(){
+
+        
+
+
         if (GameManager.gameo != null){
             go = GameManager.gameo.gover;
 
@@ -33,6 +42,15 @@ public class MainMenu : MonoBehaviour
             gameover.SetActive(true);
         } else {
             gameover.SetActive(false);
+        }
+    }
+
+    public void HighScore(){
+        int temp = GameManager.score;
+        newscore.text = temp.ToString();
+
+        if (temp > hscore){
+            highscore.text = newscore.text;
         }
     }
 }

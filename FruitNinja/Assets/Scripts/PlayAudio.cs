@@ -34,20 +34,17 @@ public class PlayAudio : MonoBehaviour
 
     public void Swipe(bool tf)
     {
-        //activated from blade script
-
-        /*need to figure out how to make it play
-         when mouse is pressed but also turn off
-        when audio is done playing and also
-        figure out how to have it play everytime
-        mouse is moved*/
+    
         GameSwipe.SetActive(tf);
+        Wait(2);
+        GameSwipe.SetActive(false);
 
     }
 
     //need to figure out a way to have multiple instances of this audio
     public void Sizzle(bool tf)
     {
+        print("swipe");
         //activated from spawner script
         GameSizzle.SetActive(tf);
         if (GameObject.Find("Bomb") != null)

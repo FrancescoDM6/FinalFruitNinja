@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 18317202978277968, guid: 92c881a8d35e0324ba294378a21b22aa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 18317202978277968, guid: 92c881a8d35e0324ba294378a21b22aa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 18317202978277968, guid: 92c881a8d35e0324ba294378a21b22aa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.1
+      objectReference: {fileID: 0}
     - target: {fileID: 120592706863691912, guid: 92c881a8d35e0324ba294378a21b22aa, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -83,6 +95,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 075196a64bac2ab49be9e49ec748cdb0, type: 2}
+    - target: {fileID: 4030379664404088309, guid: 92c881a8d35e0324ba294378a21b22aa, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 6516597096684811040, guid: 92c881a8d35e0324ba294378a21b22aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

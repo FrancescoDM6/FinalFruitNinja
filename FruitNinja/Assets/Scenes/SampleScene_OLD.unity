@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 187473123}
-  - component: {fileID: 187473122}
+  - component: {fileID: 187473124}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -208,21 +208,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &187473122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187473121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ef304cba0cfa5f41b09a857cfd2e3c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1035330197}
-  fadeImage: {fileID: 879703225}
-  score: 0
 --- !u!4 &187473123
 Transform:
   m_ObjectHideFlags: 0
@@ -238,6 +223,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &187473124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187473121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69fbed73fd502bf4a8e99aa6803c3cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1035330197}
+  fadeImage: {fileID: 879703225}
+  score: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,8 +992,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1840355261}
-  - component: {fileID: 1840355260}
   - component: {fileID: 1840355259}
+  - component: {fileID: 1840355262}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -1014,37 +1014,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1840355260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840355258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e26aaf444192f4ebde32b35a860865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  torque: 1
-  bomb: {fileID: 6386381059559477297, guid: a8e17cb40e2e225478a47481d5b6df95, type: 3}
-  fruitPrefabs:
-  - {fileID: 388895983315201714, guid: 3f3473d03d73c614ca25f47fe022bc64, type: 3}
-  - {fileID: 7287319495364455727, guid: 606e809bff7ab9f4da93ea3ccef9948c, type: 3}
-  - {fileID: 388895983315201714, guid: 6f011ae00bc498948b0a07c6adf3f627, type: 3}
-  - {fileID: 388895983315201714, guid: 92c881a8d35e0324ba294378a21b22aa, type: 3}
-  - {fileID: 7287319495364455727, guid: 8686ac37ce85b4944a1ebb1f3f8615f3, type: 3}
-  bombPrefab: {fileID: 6386381059559477297, guid: a8e17cb40e2e225478a47481d5b6df95, type: 3}
-  bombChance: 0.654
-  blueberryPrefab: {fileID: 7287319495364455727, guid: 69801e73637f3704bbd543ffa1dc92a1, type: 3}
-  blueberryChance: 0.1
-  minSpawnDelay: 0.5
-  maxSpawnDelay: 1.5
-  minAngle: -15
-  maxAngle: 15
-  minForce: 18
-  maxForce: 24
-  maxLifetime: 5
 --- !u!4 &1840355261
 Transform:
   m_ObjectHideFlags: 0
@@ -1060,6 +1029,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1840355262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840355258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b3ae06ceabb8e4c8b809e213634311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torque: 0
+  bomb: {fileID: 6386381059559477297, guid: 4150d1ef2736ad342959d4ac12b622de, type: 3}
+  fruitPrefabs:
+  - {fileID: 388895983315201714, guid: 35f24e7db9690324bbdc6e0c05d0dd3c, type: 3}
+  - {fileID: 7287319495364455727, guid: a9a9854efec8f9c4d94f5bf5343e300c, type: 3}
+  - {fileID: 388895983315201714, guid: d64a3e6de17c2174b844ac5b34cb0548, type: 3}
+  - {fileID: 388895983315201714, guid: 5ea4b2729182d6344bd39a6b2b0c8800, type: 3}
+  - {fileID: 7287319495364455727, guid: 1b2fd0a0db741184597bbeba6ed215ee, type: 3}
+  bombPrefab: {fileID: 6386381059559477297, guid: 4150d1ef2736ad342959d4ac12b622de, type: 3}
+  bombChance: 0.05
+  minSpawnDelay: 0.5
+  maxSpawnDelay: 1.5
+  minAngle: -15
+  maxAngle: 15
+  minForce: 18
+  maxForce: 24
+  maxLifetime: 5
 --- !u!1 &2105434248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,8 +1067,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2105434251}
-  - component: {fileID: 2105434249}
   - component: {fileID: 2105434252}
+  - component: {fileID: 2105434253}
   m_Layer: 0
   m_Name: Blade
   m_TagString: Player
@@ -1078,20 +1076,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2105434249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2105434248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0efeaee3d66cbe409fd387fa05edd68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sliceForce: 5
-  minSliceVelocity: 0.01
 --- !u!4 &2105434251
 Transform:
   m_ObjectHideFlags: 0
@@ -1122,3 +1106,17 @@ CapsuleCollider:
   m_Height: 8
   m_Direction: 2
   m_Center: {x: -0.11597377, y: 0, z: 2.4324543}
+--- !u!114 &2105434253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105434248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eacba9a4fc4a324885724e007215b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliceForce: 5
+  minSliceVelocity: 0.01

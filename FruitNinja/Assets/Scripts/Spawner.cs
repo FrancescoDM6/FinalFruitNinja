@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
 
     [Range(0f,1f)]
 
-    public float bombChance = 0.09f;
+    public float bombChance = 0.1f;
     public GameObject blueberryPrefab;
     public float blueberryChance = 0.1f;
 
@@ -35,10 +35,30 @@ public class Spawner : MonoBehaviour
 
     public float maxLifetime = 4f;
 
+    public float timer;
+
 
     private void Awake()
     {
+        timer = 0f;
         spawnArea = GetComponent<Collider>();
+    }
+
+    public void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer%300 >= 1)//Only increase bomb chance for 5 minutes strait
+        {
+            IncreaseBombChance();
+        }
+    }
+
+    public void IncreaseBombChance()
+    {
+        if (timer%60 <= .1)//every ~60 seconds
+        {
+            bombChance += 0.05f;
+        }
     }
 
     private void OnEnable()
@@ -97,9 +117,9 @@ public class Spawner : MonoBehaviour
                 isBomb = false;
             }
             
-            if(isBomb == true){
+           /* if(isBomb == true){
                 GetComponent<AudioSource>().Play();
-            }
+            }*/
 
             // if(isBonusBerry == true){
 

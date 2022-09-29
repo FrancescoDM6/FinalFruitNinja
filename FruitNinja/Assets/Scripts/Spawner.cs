@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
 
     public float bombChance = 0.1f;
     public GameObject blueberryPrefab;
-    public float blueberryChance = 0.1f;
+    public float blueberryChance = 0.15f;
 
     public float minSpawnDelay = .5f;
     public float maxSpawnDelay = 1.5f;
@@ -90,13 +90,14 @@ public class Spawner : MonoBehaviour
                 //     }
                 // }
                 
-            } else if (Random.value < bombChance && Random.value > bonusBerryChance){
+            } else if (Random.value < bombChance){
                 prefab = bombPrefab;
                 isBomb = true;
-            } else if (Random.value < bonusBerryChance){
-                prefab = bonusBerryPrefab;
-                isBonusBerry = true;
             }
+            // } else if (Random.value < bonusBerryChance){
+            //     // prefab = bonusBerryPrefab;
+            //     // isBonusBerry = true;
+            // }
 
             Vector3 position = new Vector3();
             position.x = Random.Range(spawnArea.bounds.min.x, spawnArea.bounds.max.x);
@@ -127,6 +128,7 @@ public class Spawner : MonoBehaviour
             
 
             Destroy(fruit, maxLifetime);
+            
 
             float force = Random.Range(minForce, maxForce);
             fruit.GetComponent<Rigidbody>().AddForce(fruit.transform.up * force, ForceMode.Impulse);

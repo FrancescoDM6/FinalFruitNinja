@@ -11,6 +11,7 @@ public class Fruit : MonoBehaviour
     private Collider fruitCol;
     private ParticleSystem juiceParticleEffect;
 
+
     public int points = 1;
 
     public int multiplier = 1;
@@ -24,6 +25,12 @@ public class Fruit : MonoBehaviour
         juiceParticleEffect = GetComponentInChildren<ParticleSystem>();
     }
 
+    private void SliceSound(string fruit){
+        // string fruit = whole.transform.parent.name;
+        FindObjectOfType<PlayAudio>().fruitCut(fruit);
+
+    }
+
     private void Slice(Vector3 direction, Vector3 position, float force)
     {
 
@@ -35,12 +42,13 @@ public class Fruit : MonoBehaviour
         // }
 
         GetPoint(multiplier);
-
-        whole.SetActive(false); ;
+        whole.SetActive(false); 
         sliced.SetActive(true);
 
         fruitCol.enabled = false;
         juiceParticleEffect.Play();
+
+
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         sliced.transform.rotation = Quaternion.Euler(0f, 0f, angle);
@@ -60,6 +68,13 @@ public class Fruit : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            // print(whole.transform.parent.name);
+            string fruit = whole.transform.parent.name;
+            print(fruit);
+
+            SliceSound(fruit);
+
+
             Blade blade = other.GetComponent<Blade>();
             Slice(blade.direction, blade.transform.position, blade.sliceForce);
         }

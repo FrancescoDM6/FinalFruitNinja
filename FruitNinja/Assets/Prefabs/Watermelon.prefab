@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 376782785051721072, guid: 92c881a8d35e0324ba294378a21b22aa, type: 3}
+      propertyPath: multiplier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 388895983315201714, guid: 92c881a8d35e0324ba294378a21b22aa, type: 3}
       propertyPath: m_Name
       value: Watermelon

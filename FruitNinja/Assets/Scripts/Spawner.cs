@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
 
     public GameObject bonusBerry;
     public bool isBonusBerry = false;
-    public float bonusBerryChance = 0.01f;
+    public float bonusBerryChance = 0.01f;//the x2peach
     public GameObject bonusBerryPrefab;
 
     public GameObject[] fruitPrefabs;
@@ -20,9 +20,9 @@ public class Spawner : MonoBehaviour
 
     [Range(0f,1f)]
 
-    public float bombChance = 0.1f;
+    public float bombChance = 0.05f;
     public GameObject blueberryPrefab;
-    public float blueberryChance = 0.1f;
+    public float blueberryChance = 0.0f;
 
     public float minSpawnDelay = .5f;
     public float maxSpawnDelay = 1.5f;
@@ -36,6 +36,7 @@ public class Spawner : MonoBehaviour
     public float maxLifetime = 4f;
 
     public float timer;
+    public float randomNum;
 
 
     private void Awake()
@@ -51,6 +52,7 @@ public class Spawner : MonoBehaviour
         {
             IncreaseBombChance();
         }
+        bonusBerryChance = bombChance / 4;
     }
 
     public void IncreaseBombChance()
@@ -71,6 +73,8 @@ public class Spawner : MonoBehaviour
         StopAllCoroutines();
     }
 
+
+
     private IEnumerator Spawn()
     {
         yield return new WaitForSeconds(2f);
@@ -78,22 +82,16 @@ public class Spawner : MonoBehaviour
         while (enabled)
         {
             GameObject prefab = fruitPrefabs[Random.Range(0, fruitPrefabs.Length)];
+            randomNum = Random.value;
 
-            if (Random.value < blueberryChance && Random.value > bombChance)
+            if (randomNum < blueberryChance && randomNum > bombChance)
             {
                 prefab = blueberryPrefab;
-                // if ()
-                // {
-                    
-                //     if(Random.value < bonusBerryChance){
-                        
-                //     }
-                // }
                 
-            } else if (Random.value < bombChance && Random.value > bonusBerryChance){
+            } else if (randomNum < bombChance && randomNum > bonusBerryChance){
                 prefab = bombPrefab;
                 isBomb = true;
-            } else if (Random.value < bonusBerryChance){
+            } else if (randomNum < bonusBerryChance){
                 prefab = bonusBerryPrefab;
                 isBonusBerry = true;
             }

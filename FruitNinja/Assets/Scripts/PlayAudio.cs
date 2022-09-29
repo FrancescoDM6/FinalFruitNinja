@@ -44,7 +44,7 @@ public class PlayAudio : MonoBehaviour
     //need to figure out a way to have multiple instances of this audio
     public void Sizzle(bool tf)
     {
-        print("swipe");
+        //print("swipe");
         //activated from spawner script
         GameSizzle.SetActive(tf);
         if (GameObject.Find("Bomb") != null)
@@ -63,6 +63,7 @@ public class PlayAudio : MonoBehaviour
 
     public IEnumerator Wait(float time)
     {
+        print("wait" + time);
         yield return new WaitForSeconds(time);
     }
 

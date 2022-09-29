@@ -79,13 +79,8 @@ public class Fruit : MonoBehaviour
         if (mult == 2)
         {
             print("2");
-            //timeStamp = timer;
-            //stay 2 for 20 seconds then go to 1
-            for (int x=1;x<=20;x++) 
-            {
-                mult = 1;
-                print("x1"); 
-            }
+            FindObjectOfType<PlayAudio>().Wait(20f);
+            print("1");
             
         }
         multiplier = mult;
@@ -93,10 +88,9 @@ public class Fruit : MonoBehaviour
         points = points*multiplier;
         FindObjectOfType<GameManager>().IncreaseScore(points);
 
-        multiplier = 1;
+        //multiplier = 1;
     }
 
-    
 
 
 }

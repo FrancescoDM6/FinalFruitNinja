@@ -102,22 +102,9 @@ public class GameManager : MonoBehaviour
         }
 
         yield return new WaitForSecondsRealtime(2.8f);
-
-
-        /*elapsed = 0f;
-
-        while (elapsed < duration)
-        {
-            float t = Mathf.Clamp01(elapsed / duration);
-            fadeImage.color = Color.Lerp(Color.white, Color.clear, t);
-
-            elapsed += Time.unscaledDeltaTime;
-
-            yield return null;
-        }*/
-        
-        // MainMenu.GameOver();
         SceneManager.LoadScene(1);
 
     }
+
+   
 }

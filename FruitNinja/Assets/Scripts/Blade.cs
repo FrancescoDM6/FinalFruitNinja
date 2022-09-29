@@ -10,7 +10,7 @@ public class Blade : MonoBehaviour
     private TrailRenderer sliceTrail;
 
     public float sliceForce = 5f;
-    public float minSliceVelocity = 0.01f;
+    public float minSliceVelocity = 0.001f;
 
     //public AudioSource Swordswipe1;
 
@@ -39,7 +39,9 @@ public class Blade : MonoBehaviour
     private void Update()
     {
         ContinueSlice();
-        FindObjectOfType<PlayAudio>().Swipe(true);//plays swipe when hitting fruit
+
+
+        // FindObjectOfType<PlayAudio>().Swipe(true);//plays swipe when hitting fruit
         /* if (Input.GetMouseButtonDown(0))
          {
 
@@ -83,10 +85,15 @@ public class Blade : MonoBehaviour
     {
         Vector3 newPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         newPosition.z = 0f;
-
+        // Vector3 oldDir = direction;
         direction = newPosition - transform.position;
 
+        // float angle = Vector3.Angle(direction, oldDir);
+        // if (angle >= 90.0f){
+        //     FindObjectOfType<PlayAudio>().Swipe(true);
+        // }
         float velocity = direction.magnitude / Time.deltaTime;
+        
         sliceCollider.enabled = velocity > minSliceVelocity;
 
         transform.position = newPosition;

@@ -4883,8 +4883,8 @@ GameObject:
   - component: {fileID: 2742180536328729532}
   - component: {fileID: -7230929999413987189}
   m_Layer: 0
-  m_Name: Fruit_base
-  m_TagString: Untagged
+  m_Name: X2 Peach
+  m_TagString: Peach
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4950,9 +4950,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whole: {fileID: 1555652010554365201}
   sliced: {fileID: 8261277255733606725}
+  numSliced: 0
   points: 1
-  multiplier: 1
+  multiplier: 2
   bb: 0
+  secondsCount: 0
 --- !u!1001 &1826104727398131776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5004,6 +5006,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 55f9cdf4840585e45bef7acb1ccba014, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca865a37e4f1c4c469efc9250b0ca2a2, type: 2}
     - target: {fileID: 919132149155446097, guid: 55f9cdf4840585e45bef7acb1ccba014, type: 3}
       propertyPath: m_Name
       value: Whole
@@ -5011,6 +5017,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 55f9cdf4840585e45bef7acb1ccba014, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55f9cdf4840585e45bef7acb1ccba014, type: 3}
+      propertyPath: m_TagString
+      value: Peach
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55f9cdf4840585e45bef7acb1ccba014, type: 3}
@@ -5031,6 +5041,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2247407152364207475}
     m_Modifications:
+    - target: {fileID: -8863667214212606868, guid: 25bcd1cf3d197094da81a540ad025aa4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca865a37e4f1c4c469efc9250b0ca2a2, type: 2}
+    - target: {fileID: -8863667214212606868, guid: 25bcd1cf3d197094da81a540ad025aa4, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5bde7b525e12cd4ea50650e04fb4b5a, type: 2}
     - target: {fileID: -8679921383154817045, guid: 25bcd1cf3d197094da81a540ad025aa4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -5075,6 +5093,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -895306380916907690, guid: 25bcd1cf3d197094da81a540ad025aa4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca865a37e4f1c4c469efc9250b0ca2a2, type: 2}
+    - target: {fileID: -895306380916907690, guid: 25bcd1cf3d197094da81a540ad025aa4, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c5bde7b525e12cd4ea50650e04fb4b5a, type: 2}
     - target: {fileID: 919132149155446097, guid: 25bcd1cf3d197094da81a540ad025aa4, type: 3}
       propertyPath: m_Name
       value: Sliced
@@ -5086,6 +5112,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 25bcd1cf3d197094da81a540ad025aa4, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7871701702548139395, guid: 25bcd1cf3d197094da81a540ad025aa4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7871701702548139395, guid: 25bcd1cf3d197094da81a540ad025aa4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7871701702548139395, guid: 25bcd1cf3d197094da81a540ad025aa4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25bcd1cf3d197094da81a540ad025aa4, type: 3}

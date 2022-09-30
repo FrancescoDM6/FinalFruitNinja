@@ -2009,10 +2009,10 @@ MonoBehaviour:
   torque: 1
   bomb: {fileID: 6386381059559477297, guid: a8e17cb40e2e225478a47481d5b6df95, type: 3}
   isBomb: 0
-  bonusBerry: {fileID: 7287319495364455727, guid: 69801e73637f3704bbd543ffa1dc92a1, type: 3}
+  bonusBerry: {fileID: 2015827431069313865, guid: 227c11e2cb7977245a4b04ee465953ba, type: 3}
   isBonusBerry: 0
   bonusBerryChance: 0.01
-  bonusBerryPrefab: {fileID: 7287319495364455727, guid: 69801e73637f3704bbd543ffa1dc92a1, type: 3}
+  bonusBerryPrefab: {fileID: 2015827431069313865, guid: 227c11e2cb7977245a4b04ee465953ba, type: 3}
   fruitPrefabs:
   - {fileID: 388895983315201714, guid: 3f3473d03d73c614ca25f47fe022bc64, type: 3}
   - {fileID: 7287319495364455727, guid: 606e809bff7ab9f4da93ea3ccef9948c, type: 3}
@@ -2020,7 +2020,7 @@ MonoBehaviour:
   - {fileID: 388895983315201714, guid: 92c881a8d35e0324ba294378a21b22aa, type: 3}
   - {fileID: 7287319495364455727, guid: 8686ac37ce85b4944a1ebb1f3f8615f3, type: 3}
   bombPrefab: {fileID: 6386381059559477297, guid: a8e17cb40e2e225478a47481d5b6df95, type: 3}
-  bombChance: 0.1
+  bombChance: 0.05
   blueberryPrefab: {fileID: 7287319495364455727, guid: 69801e73637f3704bbd543ffa1dc92a1, type: 3}
   blueberryChance: 0.1
   minSpawnDelay: 0.5
@@ -2031,6 +2031,7 @@ MonoBehaviour:
   maxForce: 24
   maxLifetime: 5
   timer: 0
+  randomNum: 0
 --- !u!4 &1840355261
 Transform:
   m_ObjectHideFlags: 0

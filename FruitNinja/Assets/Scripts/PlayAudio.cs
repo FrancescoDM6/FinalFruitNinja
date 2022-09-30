@@ -102,6 +102,7 @@ public class PlayAudio : MonoBehaviour
 
     public IEnumerator Wait(float time)
     {
+        print("wait" + time);
         yield return new WaitForSeconds(time);
     }
 

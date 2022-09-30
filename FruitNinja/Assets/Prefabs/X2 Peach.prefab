@@ -4954,7 +4954,8 @@ MonoBehaviour:
   points: 1
   multiplier: 2
   bb: 0
-  secondsCount: 0
+  timer: 0
+  bonus: 0
 --- !u!1001 &1826104727398131776
 PrefabInstance:
   m_ObjectHideFlags: 0

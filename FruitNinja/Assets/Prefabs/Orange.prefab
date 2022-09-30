@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7230929999413987189, guid: d904bc31e3da2cb4a9bdc690e3700725, type: 3}
+      propertyPath: timer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7230929999413987189, guid: d904bc31e3da2cb4a9bdc690e3700725, type: 3}
       propertyPath: multiplier
       value: 1
       objectReference: {fileID: 0}

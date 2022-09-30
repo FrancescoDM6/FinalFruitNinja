@@ -16,13 +16,14 @@ public class Spawner : MonoBehaviour
     public GameObject bonusBerryPrefab;
 
     public GameObject[] fruitPrefabs;
-    public GameObject bombPrefab;
 
     [Range(0f,1f)]
 
-    public float bombChance = 0.05f;
+    public GameObject bombPrefab;
+    public float bombChance = 0.2f;
+
     public GameObject blueberryPrefab;
-    public float blueberryChance = 0.0f;
+    public float blueberryChance = 0.3f;
 
     public float minSpawnDelay = .5f;
     public float maxSpawnDelay = 1.5f;
@@ -52,14 +53,14 @@ public class Spawner : MonoBehaviour
         {
             IncreaseBombChance();
         }
-        bonusBerryChance = bombChance / 4;
+        bonusBerryChance = bombChance / 5;
     }
 
     public void IncreaseBombChance()
     {
         if (timer%60 <= .1)//every ~60 seconds
         {
-            bombChance += 0.05f;
+            bombChance += 0.005f;
         }
     }
 
@@ -83,6 +84,7 @@ public class Spawner : MonoBehaviour
         {
             GameObject prefab = fruitPrefabs[Random.Range(0, fruitPrefabs.Length)];
             randomNum = Random.value;
+            print(randomNum);
 
             if (randomNum < blueberryChance && randomNum > bombChance)
             {
@@ -96,6 +98,20 @@ public class Spawner : MonoBehaviour
                 prefab = bonusBerryPrefab;
                 isBonusBerry = true;
             }
+
+
+            // if (randomNum < blueberryChance && randomNum > bonusBerryChance)
+            // {
+            //     prefab = blueberryPrefab;
+                
+            // } else if (randomNum < bombChance && randomNum > blueberryChance){
+            //     prefab = bombPrefab;
+            //     isBomb = true;
+
+            // } else if (randomNum < bonusBerryChance){
+            //     prefab = bonusBerryPrefab;
+            //     isBonusBerry = true;
+            // }
             // } else if (Random.value < bonusBerryChance){
             //     // prefab = bonusBerryPrefab;
             //     // isBonusBerry = true;
@@ -120,12 +136,10 @@ public class Spawner : MonoBehaviour
                 isBomb = false;
             }
             
-           /* if(isBomb == true){
-                GetComponent<AudioSource>().Play();
-            }*/
+           
 
             // if(isBonusBerry == true){
-
+            //     isBonusBerry = false;
             // }
             
 

@@ -16,13 +16,34 @@ public class GameManager : MonoBehaviour
     private Spawner spawner;
 
     public int score;
+    public bool bonus;
+    public float timer = 10f;
+    public int multiplier;
   
 
+
+    private void Update ()
+    {
+        if (bonus)
+        {
+            if (timer > 0)
+            {
+                print("1");
+                timer -= Time.deltaTime;
+                print('2');
+            } else {
+                bonus = false;
+                multiplier = 1;
+                timer = 10f;
+            }
+        }
+    }
 
     private void Awake()
     {
         blade = FindObjectOfType<Blade>();
         spawner = FindObjectOfType<Spawner>();
+        
     }
 
     private void Start()
@@ -38,8 +59,10 @@ public class GameManager : MonoBehaviour
         spawner.enabled = true;
 
         score = 0;
+        multiplier = 1;
         scoreText.text = score.ToString();
         
+        bonus = false;
 
         ClearScene();
     }
@@ -65,9 +88,14 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void IncreaseScore(int amount)
+    public void IncreaseScore(int amount, int mult)
     {
-        score += amount;
+        if (mult > 1)
+        {
+            bonus = true;
+            multiplier = mult;
+        }
+        score += (amount*multiplier);
         scoreanimator.SetTrigger("change");
 
         scoreText.text = score.ToString();

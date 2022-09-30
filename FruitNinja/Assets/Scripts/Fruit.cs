@@ -16,19 +16,28 @@ public class Fruit : MonoBehaviour
     public int points = 1;
 
     public int multiplier;
+
     public bool bb = false;
 
-    public int timer;
+    // public float timer;
+    // public bool bonus = false;
    // public float timeStamp;
 
-        private void Awake()
+    private void Awake()
     {
        // timer = FindObjectOfType<Spawner>().timer;
         //timer = 0f;
         numSliced = 0;
+        // multTemp = 1;
         fruitRB = GetComponent<Rigidbody>();
         fruitCol = GetComponent<Collider>();
         juiceParticleEffect = GetComponentInChildren<ParticleSystem>();
+    }
+
+    private void Update()
+    {
+        
+
     }
 
     private void SliceSound(string fruit){
@@ -46,8 +55,8 @@ public class Fruit : MonoBehaviour
         // } else if (ActivateBonus() == true){
         //     GetPoint(multiplier);
         // }
-
-        GetPoint(multiplier);
+        
+        GetPoint();
         whole.SetActive(false); 
         sliced.SetActive(true);
 
@@ -76,7 +85,6 @@ public class Fruit : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // print(whole.transform.parent.name);
             string fruit = whole.transform.parent.name;
             print(fruit);
 
@@ -89,18 +97,14 @@ public class Fruit : MonoBehaviour
         }
     }
 
-    private void GetPoint(int mult){
-        if (mult == 2)
-        {
-            print("2");
-            FindObjectOfType<PlayAudio>().Wait(20f);
-            print("1");
-            
-        }
-        multiplier = mult;
+    private void GetPoint(){
+        
 
-        points = points*multiplier;
-        FindObjectOfType<GameManager>().IncreaseScore(points);
+        
+        FindObjectOfType<GameManager>().IncreaseScore(points, multiplier);
+        
+
+        
 
         //multiplier = 1;
     }

@@ -12,11 +12,7 @@ public class PlayAudio : MonoBehaviour
     public AudioSource GameSizzle;
 
 
-    public AudioSource AppleCut;
-    public AudioSource KiwiCut;
-    public AudioSource OrangeCut;
-    public AudioSource LemonCut;
-    public AudioSource WatermelonCut;
+    public AudioSource AppleCut, KiwiCut, OrangeCut, LemonCut, WatermelonCut;
     // public AudioSource BlueberryCut;
 
 

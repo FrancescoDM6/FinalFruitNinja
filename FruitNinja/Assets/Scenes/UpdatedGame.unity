@@ -1461,10 +1461,10 @@ MonoBehaviour:
   GameSwipe: {fileID: 823016942}
   GameSizzle: {fileID: 1472466598}
   AppleCut: {fileID: 69045689}
-  KiwiCut: {fileID: 0}
-  OrangeCut: {fileID: 0}
-  LemonCut: {fileID: 0}
-  WatermelonCut: {fileID: 0}
+  KiwiCut: {fileID: 1578921671}
+  OrangeCut: {fileID: 84054897}
+  LemonCut: {fileID: 1578921671}
+  WatermelonCut: {fileID: 146018849}
 --- !u!1 &1237197294
 GameObject:
   m_ObjectHideFlags: 0

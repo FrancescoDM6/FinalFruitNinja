@@ -19,7 +19,9 @@ public class GameManager : MonoBehaviour
     public bool bonus;
     public float timer = 10f;
     public int multiplier;
-  
+
+    public GameObject[] backgroundChoices;
+    //[Range(0f, 1f)]
 
 
     private void Update ()
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour
 
         blade.enabled = true;
         spawner.enabled = true;
+        PickBackground();
 
         score = 0;
         multiplier = 1;
@@ -87,6 +90,14 @@ public class GameManager : MonoBehaviour
             Destroy(blueberry.gameObject);*/
 
     }
+
+    public void PickBackground()
+    {
+        GameObject prefab = backgroundChoices[Random.Range(0, backgroundChoices.Length)];
+
+        prefab.SetActive(true);
+    }
+
 
     public void IncreaseScore(int amount, int mult)
     {

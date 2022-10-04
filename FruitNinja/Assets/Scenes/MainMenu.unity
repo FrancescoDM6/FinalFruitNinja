@@ -221,8 +221,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1035330197}
+  scoreanimator: {fileID: 0}
   fadeImage: {fileID: 879703225}
   score: 0
+  bonus: 0
+  timer: 10
+  multiplier: 0
 --- !u!4 &187473123
 Transform:
   m_ObjectHideFlags: 0
@@ -696,7 +700,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3c75065a3ac6acf429751e21c22f2e86, type: 2}
+  - {fileID: 2100000, guid: bcc0188a2934d264bb5b91bab8aa518a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1028,6 +1032,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torque: 1
   bomb: {fileID: 6386381059559477297, guid: a8e17cb40e2e225478a47481d5b6df95, type: 3}
+  isBomb: 0
+  bonusBerry: {fileID: 0}
+  isBonusBerry: 0
+  bonusBerryChance: 0.01
+  bonusBerryPrefab: {fileID: 0}
   fruitPrefabs:
   - {fileID: 388895983315201714, guid: 3f3473d03d73c614ca25f47fe022bc64, type: 3}
   - {fileID: 7287319495364455727, guid: 606e809bff7ab9f4da93ea3ccef9948c, type: 3}
@@ -1045,6 +1054,8 @@ MonoBehaviour:
   minForce: 18
   maxForce: 24
   maxLifetime: 5
+  timer: 0
+  randomNum: 0
 --- !u!4 &1840355261
 Transform:
   m_ObjectHideFlags: 0

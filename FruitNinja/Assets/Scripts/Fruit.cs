@@ -86,7 +86,7 @@ public class Fruit : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             string fruit = whole.transform.parent.name;
-            print(fruit);
+            //print(fruit);
 
             SliceSound(fruit);
 

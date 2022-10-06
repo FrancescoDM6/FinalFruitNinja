@@ -54,7 +54,7 @@ public class PlayAudio : MonoBehaviour
     //need to figure out a way to have multiple instances of this audio
     public void Sizzle(bool tf)
     {
-        print("swipe");
+        //print("swipe");
         // //activated from spawner script
         // GameSizzle.SetActive(true);
         // if (FindObjectOfType<Bomb>() != true)

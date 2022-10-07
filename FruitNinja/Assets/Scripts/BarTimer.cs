@@ -21,7 +21,7 @@ public class BarTimer : MonoBehaviour
     {
         while (true)
         {
-            if (countTime % 59   == 0)
+            if (countTime % 45   == 0)
             {
                 if (isFlipped)
                     Normal();
@@ -29,7 +29,16 @@ public class BarTimer : MonoBehaviour
                     Flip();
 
             }
-            barSize.localScale -= new Vector3(1, 0, 0);
+
+            if (!isFlipped)
+            { 
+                barSize.localScale -= new Vector3(1, 0, 0);
+
+            } else {
+                barSize.localScale += new Vector3(1, 0, 0);
+
+            }
+
             countTime++;
             yield return new WaitForSeconds(1);
         }
@@ -40,6 +49,7 @@ public class BarTimer : MonoBehaviour
 
         FindObjectOfType<CameraEffect>().Flip(true);
         // playerCam.transform.rotation *= Quaternion.Euler(180, 0, 0);
+
         isFlipped = false;
     }
 

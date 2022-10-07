@@ -13,14 +13,11 @@ public class MainMenu : MonoBehaviour
     public int score;
 
     
-    
-    
-
-
     public void PlayGame (){
         
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
 
     public void OrigBuild (){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
@@ -55,5 +52,8 @@ public class MainMenu : MonoBehaviour
         
     // }
     
-    
+        public void QuitGame(){
+        Application.Quit();
+        Debug.Log("Quit!");
+    }
 }

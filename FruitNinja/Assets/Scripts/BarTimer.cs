@@ -7,7 +7,7 @@ public class BarTimer : MonoBehaviour
     public int countTime;
     private Transform barSize;
     public bool isFlipped;
-    public GameObject playerCam;
+    // public GameObject playerCam;
 
     public void Start()
     {
@@ -21,7 +21,7 @@ public class BarTimer : MonoBehaviour
     {
         while (true)
         {
-            if (countTime % 59 == 0)
+            if (countTime % 59   == 0)
             {
                 if (isFlipped)
                     Normal();
@@ -37,13 +37,17 @@ public class BarTimer : MonoBehaviour
 
     public void Normal()
     {
-        //playerCam.Transform.Rotate += Quaternion.Euler(0f, -180f, 0f);
+
+        FindObjectOfType<CameraEffect>().Flip(true);
+        // playerCam.transform.rotation *= Quaternion.Euler(180, 0, 0);
         isFlipped = false;
     }
 
     public void Flip()
     {
-        //playerCam.Transform.Rotate += Quaternion.Euler(0f, 180f, 0f);
+
+        FindObjectOfType<CameraEffect>().Flip(true);
+        // playerCam.transform.rotation *= Quaternion.Euler(180, 0, 0);
         isFlipped = true;
     }
 }

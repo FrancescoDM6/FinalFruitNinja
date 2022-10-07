@@ -12,7 +12,7 @@ public class PlayAudio : MonoBehaviour
     public AudioSource GameSizzle;
 
 
-    public AudioSource AppleCut, KiwiCut, OrangeCut, LemonCut, WatermelonCut;
+    public AudioSource AppleCut, KiwiCut, OrangeCut, LemonCut, WatermelonCut, BlueberryCut, PeachCut;
     // public AudioSource BlueberryCut;
 
 
@@ -89,6 +89,10 @@ public class PlayAudio : MonoBehaviour
             case string d when d.Contains("Lemon"): LemonCut.Play(); break;
 
             case string e when e.Contains("Watermelon"): WatermelonCut.Play(); break;
+
+            case string f when f.Contains("Blueberry"): BlueberryCut.Play(); break;
+
+            case string g when g.Contains("Peach"): PeachCut.Play(); break;
 
 
             default: break;

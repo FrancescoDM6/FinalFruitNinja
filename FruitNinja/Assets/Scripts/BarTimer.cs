@@ -21,7 +21,7 @@ public class BarTimer : MonoBehaviour
     {
         while (true)
         {
-            if (countTime % 45   == 0)
+            if (countTime % 44   == 0)
             {
                 if (isFlipped)
                     Normal();

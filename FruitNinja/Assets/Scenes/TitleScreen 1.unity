@@ -221,8 +221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fov: 130
-  changeMultiplier: 0.02
-  endFOV: 172
+  changeMultiplier: 0.03
+  endFOV: 175
   fadeImage: {fileID: 1658907150}
 --- !u!1 &975700487
 GameObject:

@@ -1422,10 +1422,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 754197277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cca70357806f9a4aa8fe3fbd3c06865, type: 3}
+  m_Script: {fileID: 11500000, guid: 7552178e3f6527f4286d23c1302306dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countTime: 0
+  countTime: 45
   isFlipped: 0
 --- !u!4 &754197279
 Transform:
@@ -1881,7 +1881,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a39f28d1298ad3846903d2b00a48c8b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 2106b6cb2cb64e7438802514911bed41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1022039130
@@ -3320,7 +3320,6 @@ GameObject:
   - component: {fileID: 1840355261}
   - component: {fileID: 1840355260}
   - component: {fileID: 1840355259}
-  - component: {fileID: 1840355262}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -3394,20 +3393,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1840355262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840355258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cca70357806f9a4aa8fe3fbd3c06865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countTime: 0
-  isFlipped: 0
 --- !u!1 &1887989367
 GameObject:
   m_ObjectHideFlags: 0
@@ -3708,6 +3693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sliceForce: 5
   minSliceVelocity: 0.01
+  bladeNum: 0
 --- !u!4 &2105434251
 Transform:
   m_ObjectHideFlags: 0

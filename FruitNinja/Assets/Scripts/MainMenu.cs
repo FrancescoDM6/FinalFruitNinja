@@ -35,7 +35,6 @@ public class MainMenu : MonoBehaviour
             }
         }
 
-
         // if (GameManager.gameo != null){
         //     go = GameManager.gameo.gover;
 

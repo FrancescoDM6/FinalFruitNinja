@@ -84,7 +84,7 @@ public class Spawner : MonoBehaviour
         {
             GameObject prefab = fruitPrefabs[Random.Range(0, fruitPrefabs.Length)];
             randomNum = Random.value;
-            print(randomNum);
+            //print(randomNum);
 
             if (randomNum < blueberryChance && randomNum > bombChance)
             {

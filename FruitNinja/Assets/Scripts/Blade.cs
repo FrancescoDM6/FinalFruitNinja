@@ -12,53 +12,23 @@ public class Blade : MonoBehaviour
     public float sliceForce = 5f;
     public float minSliceVelocity = 0.001f;
 
-    //public AudioSource Swordswipe1;
-
-    //private bool slicing;
+    public float bladeNum = 1f;
 
     private void Awake()
     {
-        
         mainCamera = Camera.main;
         sliceCollider = GetComponent<Collider>();
-        sliceTrail = GetComponentInChildren<TrailRenderer>();
+        bladeNum = FindObjectOfType<ChooseBlade>().getBladeNum();
+        ChooseSliceTrail(bladeNum);
+        //sliceTrail = GetComponentInChildren<TrailRenderer>();
         StartSlice();
         
     }
 
-    /*private void OnEnable()
-    {
-        StartSlice();
-    }
-
-    private void OnDisable()
-    {
-        StopSlice();
-    }*/
-
+  
     private void Update()
     {
         ContinueSlice();
-
-
-        // FindObjectOfType<PlayAudio>().Swipe(true);//plays swipe when hitting fruit
-        /* if (Input.GetMouseButtonDown(0))
-         {
-
-             StartSlice();
-             // GetComponent<AudioSource>().Play();
-         }
-         else if (Input.GetMouseButtonUp(0))
-         {
-             FindObjectOfType<PlayAudio>().Swipe(false);
-             StopSlice();
-         }
-         else if (slicing)
-         {
-             FindObjectOfType<PlayAudio>().Swipe(true);
-             ContinueSlice();
-             // Swordswipe1.Play();
-         }*/
     }
 
     private void StartSlice()
@@ -67,38 +37,27 @@ public class Blade : MonoBehaviour
         position.z = 0f;
         transform.position = position;
 
-        //slicing = true;
         sliceCollider.enabled = true;
         sliceTrail.enabled = true;
         sliceTrail.Clear();
     }
 
-    /*private void StopSlice()
-    {
-        slicing = false;
-        sliceCollider.enabled = false;
-        sliceTrail.enabled = false;
-
-    }*/
-
     private void ContinueSlice()
     {
         Vector3 newPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        newPosition.z = 0f;
-        // Vector3 oldDir = direction;
+        newPosition.z = 0f;;
         direction = newPosition - transform.position;
-
-        // float angle = Vector3.Angle(direction, oldDir);
-        // if (angle >= 90.0f){
-        //     FindObjectOfType<PlayAudio>().Swipe(true);
-        // }
         float velocity = direction.magnitude / Time.deltaTime;
         
         sliceCollider.enabled = velocity > minSliceVelocity;
 
         transform.position = newPosition;
+    }
 
-        
+    public void ChooseSliceTrail(float num)
+    {
+        //awake tail based on number
+        //sliceTrail = ...
     }
 
 }
